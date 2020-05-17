@@ -1,0 +1,10 @@
+.HeatMap{
+    box-sizing: border-box;
+    border: 5px;
+    box-align: center;
+    border-color: black;
+    background-color: cornsilk;
+    margin: 3px;
+    flex-direction: row;
+    display: flex;
+}

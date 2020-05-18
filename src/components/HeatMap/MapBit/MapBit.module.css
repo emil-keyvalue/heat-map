@@ -1,95 +1,13 @@
-.zero{
+.box{
     height: 50px;
     width: 50px;
     text-align: center;
     display: inline-block;
     font-size: 30px;
-    background-color: rgb(255,255,255);
-}
-
-.one{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(230,230,255);
-}
-
-.two{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(205,205,255);
-}
-
-.three{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(180,180,255);
-}
-
-.four{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(155,155,255);
-}
-
-.five{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(130,130,255);
-}
-
-.six{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(105,105,255);
-}
-
-.seven{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(80,80,255);
-}
-
-.eight{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(55,55,255);
-}
-
-.nine{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    background-color: rgb(30,30,255);
 }
 
 .background{
-    background-color: rgb(192, 163, 125);
+    background-color: white;
     text-align: center;
     display: inline-block;
     width: auto;

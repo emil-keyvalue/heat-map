@@ -13,10 +13,13 @@ const HeatMap = (props) => {
         mapBits.push(<MapBit key={k} value={percent}/>);
         k++;
     }
+    let box = (<div className={classes.HeatMap}>
+        {mapBits}
+    </div>)
     return (
-        <div className={classes.HeatMap}>
-            {mapBits}
-        </div>
+        <>
+            {props.shouldrender ? box : null}
+        </>
     );
 }
 

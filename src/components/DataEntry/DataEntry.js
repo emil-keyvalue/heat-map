@@ -5,8 +5,8 @@ import SingleEntry from './SingleEntry/SingleEntry';
 const DataEntry = (props) => {
     return (
         <>
-            <TotalEntry change={props.totalchange} click={props.totalclick}/>
-            <SingleEntry change={props.singlechange} click={props.singleclick}/>
+            <TotalEntry change={props.totalchange} click={props.totalclick} value={props.totalvalue}/>
+            <SingleEntry change={props.singlechange} click={props.singleclick} value={props.singlevalue}/>
         </>
     );
 }

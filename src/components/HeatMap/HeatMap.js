@@ -10,7 +10,7 @@ const HeatMap = (props) => {
     for(i;i<props.valuelist.length;i++){
         let percent = props.valuelist[i]/props.total;
         console.log("HeatMap.js"+percent+":"+props.total+":"+props.valuelist[i])
-        mapBits.push(<MapBit key={k} value={percent} color={props.colorScheme}/>);
+        mapBits.push(<MapBit key={k} value={percent}/>);
         k++;
     }
     return (

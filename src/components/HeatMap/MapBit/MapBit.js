@@ -36,7 +36,7 @@ const MapBit = (props) => {
         box = (<div className={classes.nine}>{Math.floor(props.value*100)}</div>);
     }
     return (
-        <div>{box}</div>
+        <div className={classes.background}>{box}</div>
     );
 }
 

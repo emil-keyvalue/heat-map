@@ -1,9 +1,6 @@
 .MainDisplay{
-    width: 1940px;
-    height: 940px;
     overflow: hidden;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
-    background-color: rgb(101, 157, 209);
 }

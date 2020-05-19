@@ -6,12 +6,16 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
 const Display = (props) => {
-    const radioitems = props.valueset.map((value,index) =>(<FormControlLabel key={toString(value)+index} value={index} control={<Radio />} label={value} />))
+    const radioitems = props.valueset.map((value,index) =>(<FormControlLabel 
+        key={toString(value)+index} 
+        value={index} 
+        control={<Radio checked={props.valueset[props.delvalue] === value} />} 
+        label={value} />))
 
     return(
         <FormControl component="fieldset">
-            <FormLabel component="legend">Gender</FormLabel>
-            <RadioGroup aria-label="heatbox" name="heatbox"  onChange={props.change}>
+            <FormLabel component="legend">Values Entered</FormLabel>
+            <RadioGroup aria-label="heatbox" name="heatbox" onChange={props.change}>
             {radioitems}
             </RadioGroup>
         </FormControl>
@@ -19,5 +23,3 @@ const Display = (props) => {
 };
 
 export default Display;
-
-//value={props.value}

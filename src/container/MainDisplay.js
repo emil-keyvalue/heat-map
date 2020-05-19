@@ -43,12 +43,11 @@ const MainDisplay = () => {
     }
 
     const deleteClickedHandler = () => {
-        let tempValueSet = [...valueSet].filter((cur) => (cur!==valueDel) );
+        let tempValueSet = [...valueSet].filter((cur) => (cur!==valueSet[valueDel]) );
         setValueSet(tempValueSet);
     }
 
     const deleteChangeHandler = (event) => {
-        console.log(event.target.value+":"+valueDel)
         setValueDel(event.target.value);
     } 
 
@@ -64,7 +63,11 @@ const MainDisplay = () => {
                     singleclick={singleClickHandler}
                     singlevalue={singleholder}
                 />
-                <DataManager clicked={deleteClickedHandler} valueset={valueSet} change={(event) => deleteChangeHandler(event)}/>
+                <DataManager 
+                    clicked={deleteClickedHandler} 
+                    valueset={valueSet} 
+                    change={(event) => deleteChangeHandler(event)}
+                    delvalue={valueDel}/>
             </div>
         </>
     );

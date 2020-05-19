@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Deleter = () => (
-    <div></div>
+const Deleter = (props) => (
+    <button onClick={props.clicked}>Delete</button>
 );
 
 export default Deleter;

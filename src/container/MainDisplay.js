@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import HeatMap from '../components/HeatMap/HeatMap';
 import classes from './MainDisplay.module.css'
 import DataEntry from '../components/DataEntry/DataEntry';
+import DataManager from '../components/DataManager/DataManager';
 
 const MainDisplay = () => {
     
@@ -12,8 +13,8 @@ const MainDisplay = () => {
     // eslint-disable-next-line
     const [valueDel,setValueDel] = useState(0);
     // eslint-disable-next-line
-    const [totalValue,setTotalValue] = useState(0)
-    const [totalholder,settotalholder] = useState(0);
+    const [totalValue,setTotalValue] = useState(100)
+    const [totalholder,settotalholder] = useState(100);
     const [singleholder,setsingleholder] = useState(0);
 
     const totalClickHandler = () => {
@@ -29,7 +30,7 @@ const MainDisplay = () => {
     const singleClickHandler = () => {
         const newValueSet = valueSet;
         newValueSet.push(singleholder);
-        setsingleholder(0)
+        setsingleholder(0);
         setValueSet(newValueSet);
         if(newValueSet>0)
         {
@@ -39,8 +40,17 @@ const MainDisplay = () => {
 
     const singleChangeHandler = (event) =>{
         setsingleholder(event.target.value);
-        console.log("Holder:"+singleholder+"  Set:"+valueSet)
     }
+
+    const deleteClickedHandler = () => {
+        let tempValueSet = [...valueSet].filter((cur) => (cur!==valueDel) );
+        setValueSet(tempValueSet);
+    }
+
+    const deleteChangeHandler = (event) => {
+        console.log(event.target.value+":"+valueDel)
+        setValueDel(event.target.value);
+    } 
 
     return (
         <>
@@ -52,11 +62,9 @@ const MainDisplay = () => {
                     totalvalue={totalholder}
                     singlechange={(event) => singleChangeHandler(event)} 
                     singleclick={singleClickHandler}
-                    singlevalue={singleholder}/>
-                    
-
-                <div>Total Values Added List</div>
-                <div>Delete Selected</div>
+                    singlevalue={singleholder}
+                />
+                <DataManager clicked={deleteClickedHandler} valueset={valueSet} change={(event) => deleteChangeHandler(event)}/>
             </div>
         </>
     );

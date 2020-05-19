@@ -4,8 +4,8 @@ import Deleter from './Deleter/Deleter';
 
 const DataManager = (props) => (
     <div>
-        <Display/>
-        <Deleter/>
+        <div><Display valueset={props.valueset} change={props.change}/></div>
+        <div><Deleter clicked={props.clicked}/></div>
     </div>
 );
 

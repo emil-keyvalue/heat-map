@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './SingleEntry.module.css'
+//import classes from './SingleEntry.module.css'
 
 const SingleEntry = (props) => (
     <div>
